@@ -1,2 +1,4 @@
 # Trading-Toys
-Developed an exchange portal for toys like dolls, miniature cars using HTML5, CSS, Node.js, Express, MongoDB as No-SQL database
+
+I created this project for the course Network Based Application Development in UNC Charlotte. I used HTML5, CSS, Node.js, Express and MongoDB as No-SQL database. This website is basically an exchange portal for toys like dolls, cars etc after user authentication. A rating system has been implemented for toys and users in the website.
+
