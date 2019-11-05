@@ -1,0 +1,24 @@
+<header>
+<div class="introduction-box">
+
+      <a href="/index">
+        <img src="resources/lets_exchange_logo.png" alt="Let's Exchange"/>
+      </a>
+
+
+      <% if(loginFlag){ %>
+
+         <label>You are signed in as <%= userFirstName %><br>
+           <a href="/logout">
+             Logout
+           </a>
+         </label>
+
+       <% } else{ %>
+         <label>Not signed-in</label>
+      <% } %>
+
+
+
+</div>
+</header>

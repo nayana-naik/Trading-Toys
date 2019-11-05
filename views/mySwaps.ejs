@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<meta charset="UTF-8">
+		<% include partials/title.ejs %>
+    <link href="/resources/styles.css" rel="stylesheet" type="text/css" />
+	  <link href="/resources/myitems.css" rel="stylesheet" type="text/css" />
+
+	  <body>
+		<% include partials/header.ejs %>
+    <% include partials/user-navigation.ejs %>
+		<main>
+			  <% include partials/site-navigation.ejs %>
+
+			<section class="my-content-data-categories">
+
+				<div class="breadcrumb-div">
+					<ul class="breadcrumb">
+					   <li><a href="/index">Home > </a> </li>
+					  <li><a href="/myItems"> My Toys </a></li>
+
+					</ul>
+				</div>
+
+<%if(mySwapsDetails===null){%>
+<h3>No items available to swap</h3>
+<%}else{%>
+
+				<h3> List of items </h3>
+				<table class="my-items-table">
+				<tr>
+					<th>
+						My toys
+					</th>
+					<th>
+						Swap Offer
+					</th>
+					<th>
+						Actions
+					</th>
+
+
+				</tr>
+
+				
+				<% for (var i = 0; i < mySwapsDetails.length; i++) {%>
+					<%if(mySwapsDetails[i].status==='Pending'){%>
+							<tr>
+								<td>
+									<%=mySwapsDetails[i].userItem%>
+								</td>
+
+								<td>
+									<%=mySwapsDetails[i].swapItem%>
+								</td>
+
+								<td>
+									<div id="update-button-1">
+										<a href="/accept?itemName=<%=mySwapsDetails[i].userItem%>">Accept</a>
+									</div>
+									<div id="delete-button-1">
+										<a href="/reject?itemName=
+										<%=mySwapsDetails[i].userItem%>">Reject</a>
+									</div>
+									<div id="update-button-2">
+										<a href="/withdraw?itemName=
+										<%=mySwapsDetails[i].userItem%>">Withdraw Swap</a>
+									</div>
+								</td>
+							</tr>
+							
+					<%}%>
+					<%}%>
+				
+				</table>
+
+				
+
+				
+		<%}%>
+
+			</section>
+		</main>
+	 <% include partials/footer.ejs %>
+
+	</body>
+
+</html>

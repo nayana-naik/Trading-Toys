@@ -1,0 +1,266 @@
+html {
+	height:100%;
+}
+body {
+    display: block;
+    margin-top:-20px; /*to remove the white space above header */
+	height:100%;
+	 background: url('bg.png');
+	background-size:cover;
+}
+
+a{
+	text-decoration:none;
+
+}
+/*Header CSS*/
+header {
+	height: 200px;
+		width:100%;
+
+}
+
+
+header > .introduction-box > img {
+	position: absolute;
+
+}
+
+
+.introduction-box label {
+		position: absolute;
+		margin-left: auto;
+		right:10px;
+		top:10px;
+}
+.breadcrumb-div{
+	font-family:Arial;
+
+}
+
+ul.breadcrumb {
+    padding: 7px 15px;
+    list-style: none;
+    background-color: none;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 12px;
+}
+
+.index-main-section-description{
+	/* background-color: white; */
+	font-weight: bold;
+}
+/*navigation bar horizontal */
+
+.horizontal-navigation-bar ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+				overflow:hidden;
+
+				position: sticky;
+				text-align: center;
+
+            }
+
+.horizontal-navigation-bar ul li {
+
+				display: inline;
+
+            }
+
+.horizontal-navigation-bar li > a {
+                display: table-cell;
+				/*display:block;*/
+				 margin:0 auto;
+                width: 200px;
+                text-align: center;
+                background-color: black;
+                color: white;
+                height: 40px;
+                vertical-align: middle;
+                text-decoration: none;
+                font-family: Arial;
+				font-weight: bold;
+				padding:10px 10px;
+            }
+
+.horizontal-navigation-bar li > a:hover {
+                opacity: 0.5;
+								color:white;
+
+            }
+
+main {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+/*Vertical nav bar */
+.vertical-navigation-bar {
+display: table-cell;
+	width: 5%;
+	vertical-align: top;
+
+}
+
+.vertical-navigation-bar ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				width: 150px;
+
+				background-color: none;
+				height: 100%;
+				text-align: center;
+
+
+			}
+.vertical-navigation-bar ul li {
+				float:left;
+				display:inline;
+}
+
+.vertical-navigation-bar li a {
+
+
+				display: table-cell;
+				 margin:0 auto;
+                width: 150px;
+                text-align: center;
+                background-color: black;
+                color: white;
+                height: 40px;
+                vertical-align: middle;
+                text-decoration: none;
+                font-family: Arial;
+				font-weight: bold;
+				padding:10px 10px;
+			}
+
+
+.vertical-navigation-bar li > a:hover {
+				opacity: 0.5;
+				color: black;
+				background-color:#66CCCC;
+
+}
+
+
+
+.content-data {
+
+	height: 100%;
+	font-family:Comic Sans MS;
+	margin-left:50px;
+}
+
+.content-data h3{
+	text-align: center;
+	font-weight:bold;
+
+}
+.content-data-categories{
+	height:100%;
+	margin-left:90px;
+
+}
+
+
+
+.content-data-categories #main-category td {
+position:relative;
+
+}
+
+.content-data-categories #main-category img{
+width:70%;
+height:auto;
+display:block;
+
+}
+
+/*creating overlay effect on pictures to display list of items available in categories */
+.overlay-effect{
+	position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #66CCCC;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+  opacity: 0.8;
+}
+
+.content-data-categories #main-category td:hover .overlay-effect {
+  width: 70%;
+}
+
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  font-family:arial;
+  font-weight:bold;
+}
+
+.my-content-data-categories h3{
+	text-align:center;
+	font-family:arial;
+}
+
+.my-content-data-categories p{
+	text-align:center;
+	font-family:arial;
+}
+
+
+#item-description{
+	font-family: Arial;
+	/* text-align:left; */
+
+
+}
+
+
+#item-background{
+
+	width:80%;
+
+}
+
+#item-image{
+	 display: block;
+    margin: auto;
+
+	height:auto;
+
+}
+
+#swap-it-button1, #rate-it-button1, #update-button-1, #update-button-2, #delete-button-1, #delete-button-2 {
+    background-color: pink;
+    border: 2px solid #ff1493;
+    color: black;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	font-family:Arial;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+
+
+footer{
+	font-family:Comic Sans MS;
+	font-size:22px;
+	text-align:center;
+};

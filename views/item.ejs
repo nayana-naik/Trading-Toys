@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<meta charset="UTF-8">
+		<% include partials/title.ejs %>
+	  <link href="/resources/styles.css" rel="stylesheet" type="text/css" />
+
+	  <body>
+      <% include partials/header.ejs %>
+
+  		<% include partials/user-navigation.ejs %>
+
+		<main>
+		<% include partials/site-navigation.ejs %>
+
+			<section class="content-data-categories">
+
+				<div class="breadcrumb-div">
+					<ul class="breadcrumb">
+					   <li><a href="/index">Home > </a> </li>
+					  <li><a href="/categories">Categories > </a></li>
+					  <li> <%= item[0].itemName %> </li>
+					</ul>
+
+				</div>
+
+				<table id="main-category">
+
+					<tr id="item-background">
+						<td id="item-image">
+
+	             <% include partials/item-images.ejs %>
+						</td>
+
+						<td id="item-description">
+              <p><h5>Category <%= item[0].category %></h5><br>
+								<p><h4><%= item[0].itemName %>!</h4><br>
+								<p><%= item[0].description %><br>
+
+						</td>
+						<td id="item-buttons">
+							<div id="swap-it-button1">
+							<a href="/swap?itemCode=<%=item[0].itemCode%>">Swap it</a>
+							</div>
+							<div id="rate-it-button1">
+							<a href="/myItems"> Rate it</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3>Swap Information:</h3>
+							
+							
+						</td>
+						
+					</tr>
+				</table>
+        <div>
+          <a href="/categories?catalogueCategory">Back to Categories</a>
+        </div>
+			</section>
+		</main>
+
+	 <% include partials/footer.ejs %>
+
+	</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<meta charset="UTF-8">
+		<% include partials/title.ejs %>
+    <link href="/resources/styles.css" rel="stylesheet" type="text/css" />
+	  <link href="/resources/myitems.css" rel="stylesheet" type="text/css" />
+
+	  <body>
+		<% include partials/header.ejs %>
+    <% include partials/user-navigation.ejs %>
+		<main>
+			  <% include partials/site-navigation.ejs %>
+
+			<section class="my-content-data-categories">
+
+				<div class="breadcrumb-div">
+					<ul class="breadcrumb">
+					   <li><a href="/index">Home > </a> </li>
+					  <li><a href="/myItems"> My Toys </a></li>
+
+					</ul>
+				</div>
+<%if(userProfileItems===null){%>
+<h3>No items to display</h3>
+<%}else{%>
+
+
+				<h3> List of items </h3>
+				<table class="my-items-table">
+				<tr>
+					<th>
+						My toys
+					</th>
+					<th>
+						Category
+					</th>
+					<th>
+						Rating
+					</th>
+
+					<th>
+						Actions
+					</th>
+
+
+				</tr>
+				
+
+				<% for (var i = 0; i < userProfileItems.length; i++) {%>
+				<tr id="swap">
+					<td>
+
+						<%= userProfileItems[i].itemName%>
+					</td>
+
+					<td>
+						<%= userProfileItems[i].category%>
+					</td>
+					<td>
+						<div class="my-item-rating">
+							<span>&#x2606;</span><span>&#x2606;</span><span>&#x2605;</span><span>&#x2605;</span><span>&#x2605;</span>
+						</div>
+					</td>
+					<td>
+							<div id="update-button-1">
+
+								<a href="/update?itemCode=
+								<%=userProfileItems[i].itemCode%>">Update</a>
+							</div>
+							<div id="delete-button-1">
+								<a href="/delete?itemCode=<%userProfileItems[i].itemCode%>">Delete</a>
+							</div>
+						</td>
+				</tr>
+<%}%>
+				</table>
+<%}%>
+			
+			</section>
+		</main>
+	 <% include partials/footer.ejs %>
+
+	</body>
+
+</html>

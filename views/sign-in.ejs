@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<meta charset="UTF-8">
+
+	<% include partials/title.ejs %>
+
+    <link href="/resources/styles.css" rel="stylesheet" type="text/css" />
+	  <body>
+
+	<% include partials/header.ejs %>
+
+    <% include partials/user-navigation.ejs %>
+		<main>
+      <% include partials/site-navigation.ejs %>
+
+			<section class="content-data">
+
+				<!-- Breadcrumb -->
+				<div class="breadcrumb-div">
+				<ul class="breadcrumb">
+				  <li><a href="/index">Home</a></li>
+
+				</ul>
+				</div>
+        <div class="index-main-section-description">
+				
+						<form method="POST" action="/login">
+								<table>
+									<tbody>
+							<tr>
+								<td colspan="1">
+									<label>Username:</label>
+								</td>
+								<td>
+									<input type="text" name="userID"/>
+								</td>
+							</tr>
+
+							<tr>
+								<td colspan="1">
+									<label>Password:</label>
+								</td>
+								<td>
+									<input type="password" name="password"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="submit" name="userLogin" value="Login"/>
+								</td>
+							</tr>
+								
+							<tr>
+								<td>
+									
+									<label><%=welcomeText%></label>
+									
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									Click here to <a href="/register">Register!</a>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</form>
+					
+					
+      </div>
+			</section>
+		</main>
+
+
+    <% include partials/footer.ejs %>
+
+	</body>
+
+</html>

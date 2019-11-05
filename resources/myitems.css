@@ -1,0 +1,32 @@
+.my-items-table{
+	width:100%;
+}
+
+
+table, th, td {
+
+	font-family:Arial;
+
+	border: 1px solid black;
+
+}
+
+th, td{
+	padding: 20px;
+
+}
+
+th{
+	background-color: yellow;
+}
+
+.my-item-rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.my-item-rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  font-size:20px;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+
+<% include partials/title.ejs %>
+
+<link href="/resources/styles.css" rel="stylesheet" type="text/css" />
+
+<body>
+
+    <% include partials/header.ejs %>
+
+    <% include partials/user-navigation.ejs %>
+    <main>
+        <% include partials/site-navigation.ejs %>
+
+        <section class="content-data">
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb-div">
+                <ul class="breadcrumb">
+                    <li><a href="/index">Home</a></li>
+
+                </ul>
+            </div>
+            <div class="index-main-section-description">
+                <table>
+                <form method="POST" action="/register">
+                    <tr>
+                        
+                        <td>
+                            <label>Username:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="username">
+                        </td>
+                    
+                    </tr>
+                    <tr>
+                        <td><label>First Name</label></td>
+                        <td><input type="text" name="firstName"></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Last Name</label>
+                        </td>
+                        <td>
+                            <input type="text" name="lastName">
+                        </td>
+                        
+                        </tr>
+                    <tr>
+                        <td>
+                            <label>Email Address</label>
+                        </td>
+
+                        <td>
+                            <input type="text" name="emailAddress">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <label>Address 1 </label>
+                        </td>
+
+                        <td>
+                            <input type="text" name="address1Field">
+                        </td>
+                    </tr>
+                        
+                    <tr>
+                        <td>
+                            <label>Address 2</label>
+                        </td>
+
+                        <td>
+                            <input type="text" name="address2Field">
+                        </td>
+                        
+                        
+                    </tr>    
+                     
+                    <tr>
+                        <td>
+                            <label>City</label>
+                        </td>
+
+                        <td>
+                            <input type="text" name="city">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <label>State</label>
+                        </td>
+                        <td>
+                            <input type="text" name="state">
+                        </td>
+                    </tr>
+                        
+                    <tr>
+                        <td>
+                            <label>Zip</label>
+                        </td>
+                        <td>
+                            <input type="text" name="zip">
+                        </td>
+                    </tr>    
+                        
+                    <tr>
+                        <td>
+                            <label>Country</label>
+                        </td>
+                        <td>
+                            <input type="text" name="country">
+                        </td>
+                    </tr>    
+                        
+                    <tr>
+                        <td>
+                            <label>Password</label>
+                        </td>
+                        <td>
+                            <input type="password" name="password">
+                        </td>
+                    </tr>    
+                    <tr>
+                        <td>
+                            <input type="submit" name="register" value="Register">
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                </form>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+    <% include partials/footer.ejs %>
+
+</body>
+
+</html>

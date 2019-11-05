@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<meta charset="UTF-8">
+		<% include partials/title.ejs %>
+	  <link href="/resources/styles.css" rel="stylesheet" type="text/css" />
+
+	  <body>
+      <% include partials/header.ejs %>
+
+  		<% include partials/user-navigation.ejs %>
+
+		<main>
+		<% include partials/site-navigation.ejs %>
+
+			<section class="content-data-categories">
+
+				<div class="breadcrumb-div">
+					<ul class="breadcrumb">
+					 
+					</ul>
+
+				</div>
+
+				<table id="main-category">
+
+					<tr id="item-background">
+						<td id="item-image">
+						 <% include partials/item-images.ejs %>
+
+						</td>
+
+						<td id="item-description">
+              <p><h5>Category <%= item[0].category %></h5><br>
+                <p><h4><%= item[0].itemName %>!</h4><br>
+                <p><%= item[0].description %><br>
+						</td>
+						<td id="item-buttons">
+							<div id="swap-it-button1">
+							<a href="/">Confirm Swap</a>
+							</div>
+
+						</td>
+					</tr>
+				</table>
+        <div>
+          <a href="/categories">Back to Categories</a>
+        </div>
+			</section>
+		</main>
+
+	 <% include partials/footer.ejs %>
+
+	</body>
+
+</html>
